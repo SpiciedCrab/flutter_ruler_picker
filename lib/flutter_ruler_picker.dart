@@ -316,10 +316,7 @@ class RulerPickerState extends State<RulerPicker> {
               )),
           Align(
             alignment: Alignment.topCenter,
-            child: Padding(
-              padding: EdgeInsets.only(top: widget.rulerMarginTop),
-              child: widget.marker ?? _buildMark(),
-            ),
+            child: widget.marker ?? _buildMark(),
           ),
         ],
       ),
