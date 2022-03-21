@@ -93,7 +93,7 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               width: MediaQuery.of(context).size.width,
               height: 80,
-              rulerMarginTop: 8,
+              rulerMarginTop: 30,
               // marker: Container(
               //     width: 8,
               //     height: 50,

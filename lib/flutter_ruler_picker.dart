@@ -206,10 +206,13 @@ class RulerPickerState extends State<RulerPicker> {
       }
     }
 
-    return Container(
-      width: width,
-      height: height,
-      color: color,
+    return Padding(
+      padding: EdgeInsets.only(top: widget.rulerMarginTop),
+      child: Container(
+        width: width,
+        height: height,
+        color: color,
+      ),
     );
   }
 
@@ -302,7 +305,7 @@ class RulerPickerState extends State<RulerPicker> {
                     },
                     child: Container(
                         width: double.infinity,
-                        height: widget.height,
+                        height: widget.height  + widget.rulerMarginTop,
                         color: widget.rulerBackgroundColor,
                         child: ListView.builder(
                           itemCount: widget.endValue - widget.beginValue + 1,
@@ -313,7 +316,7 @@ class RulerPickerState extends State<RulerPicker> {
               )),
           Align(
             alignment: Alignment.topCenter,
-            child: widget.marker ?? _buildMark(),
+            child: Padding(padding: EdgeInsets.only(top: widget.rulerMarginTop), child: widget.marker ?? _buildMark(),),
           ),
         ],
       ),
